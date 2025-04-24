@@ -39,10 +39,10 @@ class Bot (Client):
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, Config.PORT).start()
-        logging.info(f"✅  with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}. ✅")
+        logging.info(f"✅ {me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}. ✅")
 
 
-        await self.send_message(Config.OWNER, f"** Iꜱ Sᴛᴀʀᴛᴇᴅ.....✨️__**")
+        await self.send_message(Config.OWNER, f"**__{me.first_name}  Iꜱ Sᴛᴀʀᴛᴇᴅ.....✨️__**")
 
         
     async def stop(self, *args):
